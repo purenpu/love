@@ -1,2 +1,2 @@
 # love
-demo code, not release yet
+demo code
