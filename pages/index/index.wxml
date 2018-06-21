@@ -1,0 +1,95 @@
+<div class="container">
+  <view class="name">
+    <span style="float:left;width:50%;padding:10px;background:{{select_day_color}};color:white;">{{details.date}}</span>
+    <button style="float:right;padding:10px;border-radius:5px;" type="primary" bindtap="jump2today">今天</button>
+  </view>
+
+  <table class="table">
+    <tr>
+      <td>
+        <strong>女</strong>
+      </td>
+      <td>{{details.ret.wd}}</td>
+      <td></td>
+      <td>
+        <strong>男</strong>
+      </td>
+      <td>{{details.ret.md}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>体力</td>
+      <td>情绪</td>
+      <td>智力</td>
+      <td>体力</td>
+      <td>情绪</td>
+      <td>智力</td>
+    </tr>
+    <tr>
+      <td>{{details.ret.power.w1}}</td>
+      <td>{{details.ret.power.w2}}</td>
+      <td>{{details.ret.power.w3}}</td>
+      <td>{{details.ret.power.m1}}</td>
+      <td>{{details.ret.power.m2}}</td>
+      <td>{{details.ret.power.m3}}</td>
+    </tr>
+    <tr>
+      <td>{{details.HL[details.ret.power.wi1]}}</td>
+      <td>{{details.HL[details.ret.power.wi2]}}</td>
+      <td>{{details.HL[details.ret.power.wi3]}}</td>
+      <td>{{details.HL[details.ret.power.mi1]}}</td>
+      <td>{{details.HL[details.ret.power.mi2]}}</td>
+      <td>{{details.HL[details.ret.power.mi3]}}</td>
+    </tr>
+  </table>
+  <view class="name">
+    <span class="pad" style="padding:4px;background:#ff0000;color:white">4高1神</span>
+    <span class="pad" style="padding:4px;background:#FF7F00;color:white">5高</span>
+    <span class="pad" style="padding:4px;background:#BBBB00;color:white">3高1神</span>
+    <span class="pad" style="padding:4px;background:#228B22;color:white">4高</span>
+    <span class="pad" style="padding:4px;background:#0000EE;color:white">2高1神</span>
+    <span class="pad" style="padding:4px;background:#777777;color:white">3高以下</span>
+    <span class="pad" style="padding:4px;background:#000000;color:white">临界禁忌</span>
+  </view>
+</div>
+
+<div class="plugin">
+  <calendar year="{{year}}" month="{{month}}" day="{{day}}" start-date="1900-01" end-date="2099-12" header="{{header}}" next="{{next}}" prev="{{prev}}" weeks="{{week_title}}" weeks-type="{{title_type}}" show-more-days="{{more}}" lunar="{{lunar}}" cell-size="{{cs}}"
+    days-color="{{days_color}}" active-type="{{activeType}}" next-month='hi' bindnextMonth='nextMonth' bindprevMonth='prevMonth' binddateChange='dateChange' binddayClick='dayClick' />
+</div>
+
+<div class="container">
+  <form bindsubmit="sumbmit_birth" bindreset="reset_birth">
+    <view class="name">
+      <view>
+        <strong>请输入阳历生日</strong>
+      </view>
+    </view>
+    <table class="table">
+      <tr>
+        <td>女</td>
+        <td>
+          <input name="w_birth" type="digit" placeholder="{{w_birth}}" />
+        </td>
+        <td>男</td>
+        <td>
+          <input name="m_birth" type="digit" placeholder="{{m_birth}}" />
+        </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>
+          <button class="button" formType="submit" type="primary">
+            <view class="content"> 确定 </view>
+          </button>
+        </td>
+        <td> </td>
+        <td>
+          <button class="button" formType="reset" plain="{{false}}">
+            <view class="content"> 重置 </view>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

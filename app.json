@@ -1,0 +1,16 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    
+    "window": {
+        "navigationBarTitleText": "日历组件演示"
+    },
+
+    "plugins": {
+      "calendar": {
+        "version": "1.1.2",
+        "provider": "wx92c68dae5a8bb046"
+      }
+    }
+}
